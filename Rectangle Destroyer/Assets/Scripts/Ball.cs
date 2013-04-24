@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
 
 	void Awake () 
 	{
-        rigidbody.velocity = new Vector3(0, 0, -18);
+        rigidbody.velocity = new Vector3(-2, 0, -18);
 	}
 
 	void Update () 

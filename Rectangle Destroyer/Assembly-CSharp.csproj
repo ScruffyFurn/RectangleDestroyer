@@ -44,19 +44,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Camare\SmoothLookAt.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\Block.cs" />
      <Compile Include="Assets\Scripts\BreakoutGame.cs" />
+     <Compile Include="Assets\Scripts\Menu\BackToMenu.cs" />
+     <Compile Include="Assets\Scripts\Menu\ChooseLevel.cs" />
+     <Compile Include="Assets\Scripts\Menu\Credits.cs" />
+     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
      <Compile Include="Assets\Scripts\Paddle.cs" />
      <None Include="Assets\Art\Blob-Shadow\ShadowProjection.shader" />
-     <None Include="Assets\Standard Assets\Water\Sources\FX-Water Simple.shader" />
-     <None Include="Assets\Standard Assets\Gem Rendering\diamond shader.shader" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{092185B3-DA01-B2A7-2590-B3DAE7B44B41}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{DD9B8D0B-EA47-8B4F-A846-9D54463C537E}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
