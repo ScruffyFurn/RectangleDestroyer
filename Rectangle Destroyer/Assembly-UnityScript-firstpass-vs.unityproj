@@ -50,7 +50,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\DragRigidbody.js" />
      <Compile Include="Assets\Standard Assets\Scripts\FPSWalker.js" />
      <Compile Include="Assets\Standard Assets\Scripts\TimedObjectDestructor.js" />
-     <None Include="Assets\Standard Assets\Blob-Shadow\ShadowProjection.shader" />
+     <None Include="Assets\Art\Blob-Shadow\ShadowProjection.shader" />
      <None Include="Assets\Standard Assets\Water\Sources\FX-Water Simple.shader" />
      <None Include="Assets\Standard Assets\Gem Rendering\diamond shader.shader" />
   </ItemGroup>

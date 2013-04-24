@@ -48,7 +48,7 @@
      <Compile Include="Assets\Scripts\Block.cs" />
      <Compile Include="Assets\Scripts\BreakoutGame.cs" />
      <Compile Include="Assets\Scripts\Paddle.cs" />
-     <None Include="Assets\Standard Assets\Blob-Shadow\ShadowProjection.shader" />
+     <None Include="Assets\Art\Blob-Shadow\ShadowProjection.shader" />
      <None Include="Assets\Standard Assets\Water\Sources\FX-Water Simple.shader" />
      <None Include="Assets\Standard Assets\Gem Rendering\diamond shader.shader" />
   </ItemGroup>
