@@ -66,15 +66,15 @@ public class BreakoutGame : MonoBehaviour
 
     void OnGUI(){
     
-		GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.15f,200,100),
+		GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.12f,200,100),
 				  "Hit: " + blocksHit + "/" + totalBlocks,
 				  style);
 		
-		GUI.Label(new Rect(Screen.width * 0.48f, Screen.height * 0.15f,100,100),
-				  "Point: " + points,
+		GUI.Label(new Rect(Screen.width * 0.48f, Screen.height * 0.12f,100,100),
+				  "Score: " + points,
 				  style);
 		
-		GUI.Label(new Rect(Screen.width * 0.69f, Screen.height * 0.15f,100,100),
+		GUI.Label(new Rect(Screen.width * 0.69f, Screen.height * 0.12f,100,100),
 				  "Lives: " + lives,
 				  style);
 		
@@ -103,7 +103,7 @@ public class BreakoutGame : MonoBehaviour
     public void HitBlock()
     {	
         blocksHit++;
-		points++;
+		points += 100;
 		
         //For fun:
         if (blocksHit%10 == 0) //Every 10th block will spawn a new ball
