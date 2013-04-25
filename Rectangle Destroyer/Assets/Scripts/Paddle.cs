@@ -20,6 +20,9 @@ public class Paddle : MonoBehaviour {
 
     void OnCollisionExit(Collision collisionInfo ) 
 	{
+		audio.clip = BreakoutGame.SP.PaddleSound;
+		audio.Play();
+		
         //Add X velocity..otherwise the ball would only go up&down
         Rigidbody rigid = collisionInfo.rigidbody;
         float xDistance = rigid.position.x - transform.position.x;

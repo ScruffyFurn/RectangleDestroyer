@@ -10,6 +10,12 @@ public class BreakoutGame : MonoBehaviour
 	public GUIStyle style;
 
     public Transform ballPrefab;
+	
+	public AudioClip BrickSound;
+	public AudioClip MetalSound;
+	public AudioClip PaddleSound;
+	
+	//public AudioSource audioSource;
 
     private int totalBlocks;
     private int blocksHit;
@@ -95,10 +101,10 @@ public class BreakoutGame : MonoBehaviour
     }
 
     public void HitBlock()
-    {
+    {	
         blocksHit++;
 		points++;
-        
+		
         //For fun:
         if (blocksHit%10 == 0) //Every 10th block will spawn a new ball
         {
