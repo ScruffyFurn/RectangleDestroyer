@@ -2,13 +2,30 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BreakoutGame.cs">
     <Files>
-      <File FileName="Assets\Scripts\BreakoutGame.cs" Line="77" Column="64" />
-      <File FileName="Assets\Scripts\Menu\ChooseLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ball.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menu\BackToMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menu\Credits.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Paddle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Paddle.cs" Line="10" Column="52" />
+      <File FileName="Assets\Scripts\BreakoutGame.cs" Line="41" Column="35" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="BreakoutGame.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>moveInputMouse</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

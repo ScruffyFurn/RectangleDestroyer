@@ -9,7 +9,10 @@ public class Paddle : MonoBehaviour {
 	{
         float moveInput = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         transform.position += new Vector3(moveInput, 0, 0);
-
+		
+		float moveInputMouse = Input.GetAxis ("Mouse X");// * Time.deltaTime * moveSpeed;
+		transform.position += new Vector3(moveInputMouse, 0, 0);
+		
         float max = 16.0f;
         if (transform.position.x <= -max || transform.position.x >= max)
         {

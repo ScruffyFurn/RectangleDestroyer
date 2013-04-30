@@ -14,8 +14,6 @@ public class BreakoutGame : MonoBehaviour
 	public AudioClip BrickSound;
 	public AudioClip MetalSound;
 	public AudioClip PaddleSound;
-	
-	//public AudioSource audioSource;
 
     private int totalBlocks;
     private int blocksHit;
@@ -39,7 +37,9 @@ public class BreakoutGame : MonoBehaviour
 	
 	void Update()
 	{
-		if(Input.anyKeyDown && gameState == BreakoutGameState.wait)
+		if((Input.anyKeyDown || 
+		   (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Horizontal") != 0)) 
+			&& gameState == BreakoutGameState.wait)
 		{
 			gameState = BreakoutGameState.playing;
 		}
