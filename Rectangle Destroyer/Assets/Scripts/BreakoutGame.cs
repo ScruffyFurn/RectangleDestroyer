@@ -20,6 +20,7 @@ public class BreakoutGame : MonoBehaviour
     private BreakoutGameState gameState;
 	private int points = 0;
 	private int lives = 3;
+	private int levelCounter;
 	GameObject paddle; 
 
 
@@ -32,6 +33,7 @@ public class BreakoutGame : MonoBehaviour
         Time.timeScale = 1.0f;
         paddle = GameObject.FindGameObjectWithTag("Paddle");
 		SpawnBall();
+		levelCounter = Application.loadedLevel;
 		
     }
 	
@@ -67,7 +69,7 @@ public class BreakoutGame : MonoBehaviour
     void OnGUI(){
     
 		GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.12f,200,100),
-				  "Hit: " + blocksHit + "/" + totalBlocks,
+				  "Hit: " + blocksHit + " " + " of " + " " + (int)(totalBlocks * 0.75f),
 				  style);
 		
 		GUI.Label(new Rect(Screen.width * 0.48f, Screen.height * 0.12f,100,100),
@@ -78,11 +80,11 @@ public class BreakoutGame : MonoBehaviour
 				  "Lives: " + lives,
 				  style);
 		
-		GUILayout.BeginArea(new Rect(Screen.width * 0.5f,Screen.height * 0.5f,100,100));
+		GUILayout.BeginArea(new Rect(Screen.width * 0.5f,Screen.height * 0.5f,160,400));
 
         if (gameState == BreakoutGameState.lost)
         {
-            GUILayout.Label("You Lost!");
+            GUILayout.Label("You Lost",style);
             if (GUILayout.Button("Try again"))
             {
                 Application.LoadLevel(Application.loadedLevel);
@@ -90,10 +92,12 @@ public class BreakoutGame : MonoBehaviour
         }
         else if (gameState == BreakoutGameState.won)
         {
-            GUILayout.Label("You won!");
-            if (GUILayout.Button("Play again"))
+			
+            GUILayout.Label("You won",style);
+            if (GUILayout.Button("Next Level"))
             {
-                Application.LoadLevel(Application.loadedLevel);
+				levelCounter++;
+                Application.LoadLevel(levelCounter);
             }
         }
 		
@@ -112,7 +116,7 @@ public class BreakoutGame : MonoBehaviour
         }
 
         
-        if (blocksHit >= totalBlocks)
+        if (blocksHit >= totalBlocks * 0.75)
         {
             WonGame();
         }
@@ -122,6 +126,7 @@ public class BreakoutGame : MonoBehaviour
     {
         Time.timeScale = 0.0f; //Pause game
         gameState = BreakoutGameState.won;
+		
     }
 
     public void LostBall()

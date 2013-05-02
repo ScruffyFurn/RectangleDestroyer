@@ -44,10 +44,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Camare\SmoothLookAt.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\Block.cs" />
      <Compile Include="Assets\Scripts\BreakoutGame.cs" />
+     <Compile Include="Assets\Scripts\Camera\SmoothLookAt.cs" />
      <Compile Include="Assets\Scripts\Menu\BackToMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\ChooseLevel.cs" />
      <Compile Include="Assets\Scripts\Menu\Credits.cs" />
