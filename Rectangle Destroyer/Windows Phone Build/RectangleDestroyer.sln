@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleDestroyer", "RectangleDestroyer\RectangleDestroyer.csproj", "{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Master|ARM = Master|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Debug|ARM.Build.0 = Debug|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Debug|ARM.Deploy.0 = Debug|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Master|ARM.ActiveCfg = Master|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Master|ARM.Build.0 = Master|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Master|ARM.Deploy.0 = Master|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Release|ARM.ActiveCfg = Release|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Release|ARM.Build.0 = Release|ARM
+		{7A3F4159-08E4-44C7-B686-E54D3CB6D1B0}.Release|ARM.Deploy.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

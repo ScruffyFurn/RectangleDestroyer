@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public enum BreakoutGameState { wait, playing, won, lost };
+public enum BreakoutGameState { wait, playing, won, lost, pause };
 
 public class BreakoutGame : MonoBehaviour
 {
     public static BreakoutGame SP;
-	
+	public bool snapView = false;
 	public GUIStyle style;
 
     public Transform ballPrefab;
@@ -39,6 +39,19 @@ public class BreakoutGame : MonoBehaviour
 	
 	void Update()
 	{
+		if(snapView)
+		{
+			gameState = BreakoutGameState.pause;
+		}
+		
+		if(gameState == BreakoutGameState.pause && !snapView)
+		{
+			if(Input.anyKeyDown)
+			{
+				gameState = BreakoutGameState.wait;
+			}
+		}
+		
 		if((Input.anyKeyDown || 
 		   (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Horizontal") != 0)) 
 			&& gameState == BreakoutGameState.wait)
@@ -46,7 +59,7 @@ public class BreakoutGame : MonoBehaviour
 			gameState = BreakoutGameState.playing;
 		}
 		
-		if(gameState == BreakoutGameState.wait)
+		if(gameState == BreakoutGameState.wait || gameState == BreakoutGameState.pause)
 		{
 			Time.timeScale = 0.0f; //Pause game
 		}
@@ -161,4 +174,9 @@ public class BreakoutGame : MonoBehaviour
         Time.timeScale = 0.0f; //Pause game
         gameState = BreakoutGameState.lost;
     }
+
+	public static void Quit()
+	{
+		Application.Quit();
+	}
 }
